@@ -1,8 +1,13 @@
-# Payload Meilisearch Plugin
+# Payload Meilisearch Plugin (ALPHA)
 
 A plugin for [Payload CMS](https://github.com/payloadcms/payload) to connect [Meilisearch](https://meilisearch.com) and Payload.
 
-Core features:
+Planned features:
+
+- Sync collections on create, update or delete (in progress)
+- Support all field types of Payload (in progress)
+- Support for Payload's versioning system (planned)
+- Support Meilisearch index options for filtering and sorting (planned)
 
 ## Installation
 
