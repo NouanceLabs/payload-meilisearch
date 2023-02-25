@@ -1,6 +1,6 @@
 {
   "name": "@nouance/payload-meilisearch",
-  "version": "0.1",
+  "version": "0.1.1",
   "homepage:": "https://nouance.io",
   "repository": "git@github.com:NouanceLabs/payload-meilisearch.git",
   "description": "Meilisearch integration plugin for Payload CMS",
