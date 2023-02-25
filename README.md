@@ -12,9 +12,9 @@ Planned features:
 ## Installation
 
 ```bash
-  yarn add
+  yarn add @nouance/payload-meilisearch
   # OR
-  npm i
+  npm i @nouance/payload-meilisearch
 ```
 
 ## Basic Usage
@@ -23,7 +23,7 @@ In the `plugins` array of your [Payload config](https://payloadcms.com/docs/conf
 
 ```js
 import { buildConfig } from "payload/config";
-import meilisearchPlugin from "";
+import meilisearchPlugin from "@nouance/payload-meilisearch";
 
 const config = buildConfig({
   plugins: [
@@ -61,7 +61,7 @@ This option will sync collection's data and their fields to your Meilisearch ins
 
 ```js
 import { buildConfig } from "payload/config";
-import meilisearchPlugin from "@";
+import meilisearchPlugin from "@nouance/payload-meilisearch";
 
 const config = buildConfig({
   plugins: [
