@@ -3,6 +3,7 @@ import { MeiliSearch } from "meilisearch";
 import { SanitizedMeilisearchConfig } from "./types";
 import { MeilisearchConfig } from "./types";
 import { createOrUpdateCollection } from "./hooks/createOrUpdateCollection";
+import { deleteCollection } from "./hooks/deleteCollection";
 
 const payloadMeilisearch =
   (incomingConfig: MeilisearchConfig) =>
@@ -41,7 +42,12 @@ const payloadMeilisearch =
               ],
               afterDelete: [
                 ...(existingHooks?.afterDelete || []),
-                async (args) => console.log("sync to meilisearch - delete"),
+                async (args) =>
+                  deleteCollection({
+                    ...args,
+                    collection,
+                    meilisearchConfig: pluginConfig,
+                  }),
               ],
             },
           };

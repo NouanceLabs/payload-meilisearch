@@ -64,7 +64,9 @@ export const createOrUpdateCollection: CollectionAfterChangeHookWithArgs =
 
         const id = aliasedId?.alias
           ? {
-              [aliasedId.alias]: dataRef[aliasedId.name],
+              [aliasedId.alias]: aliasedId?.transformer
+                ? aliasedId?.transformer(dataRef[aliasedId.name])
+                : dataRef[aliasedId.name],
             }
           : {
               id: dataRef.id,
@@ -74,9 +76,6 @@ export const createOrUpdateCollection: CollectionAfterChangeHookWithArgs =
           ...id,
           ...syncedFields,
         };
-
-        console.log("for data", dataRef);
-        console.log("collectionSyncData", collectionSyncData);
 
         let response = await index.addDocuments([collectionSyncData]);
 

@@ -65,6 +65,14 @@ export default buildConfig({
           fields: [
             {
               name: "name",
+              alias: "id",
+              transformer: (field) => {
+                const name = String(field);
+                return name.replaceAll(" ", "-").toLocaleLowerCase();
+              },
+            },
+            {
+              name: "name",
               alias: "name",
             },
           ],
