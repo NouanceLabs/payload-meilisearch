@@ -14,11 +14,6 @@ const payloadMeilisearch =
       sync: incomingConfig?.sync || [],
     };
 
-    const client = new MeiliSearch({
-      host: pluginConfig.host,
-      apiKey: pluginConfig.apiKey,
-    });
-
     if (!collections) return config;
 
     const processedConfig: PayloadcConfig = {

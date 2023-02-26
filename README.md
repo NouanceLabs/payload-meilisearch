@@ -1,12 +1,15 @@
 # Payload Meilisearch Plugin (ALPHA)
 
+**Expect breaking changes.**
+
 A plugin for [Payload CMS](https://github.com/payloadcms/payload) to connect [Meilisearch](https://meilisearch.com) and Payload.
 
-Planned features:
+Roadmap to stable release:
 
-- Sync collections on create, update or delete (in progress)
+- ~~Sync collections on create and update~~
+- ~~Delete collections~~
 - Support all field types of Payload (in progress)
-- Support for Payload's versioning system (planned)
+- Support for Payload's draft system (planned)
 - Support Meilisearch index options for filtering and sorting (planned)
 
 ## Installation
@@ -88,4 +91,30 @@ const config = buildConfig({
 });
 
 export default config;
+```
+
+### Curently supported field types
+
+- **Code**
+- **Date**
+- **Email**
+- **JSON**
+- **Number**
+- **Point**
+- **Radio group**
+- **Select**
+- **Text**
+- **Textarea**
+
+## Development
+
+For development purposes, there is a full working example of how this plugin might be used in the [demo](./demo) of this repo. This demo can be developed locally using any [Meilisearch Cloud](https://cloud.meilisearch.com/) account, you just need a working API key. Then:
+
+```bash
+git clone git@github.com:NouanceLabs/payload-meilisearch.git \
+  cd payload-meilisearch && yarn \
+  cd demo && yarn \
+  cp .env.example .env \
+  vim .env \ # add your Meilisearch creds to this file
+  yarn dev
 ```
