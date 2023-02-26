@@ -25,8 +25,7 @@
     "payload": "^1.1.8"
   },
   "dependencies": {
-    "meilisearch": "^0.31.1",
-    "uuid": "^9.0.0"
+    "meilisearch": "^0.31.1"
   },
   "devDependencies": {
     "payload": "^1.1.8",
