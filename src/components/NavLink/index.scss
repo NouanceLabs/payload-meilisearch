@@ -1,0 +1,13 @@
+@import "~payload/scss";
+
+a.manage-button {
+  .nav & {
+    padding: base(0.25) base(0.5);
+    line-height: base(1.25);
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

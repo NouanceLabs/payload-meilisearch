@@ -4,11 +4,13 @@ import { SanitizedMeilisearchConfig } from "./types";
 import { MeilisearchConfig } from "./types";
 import { createOrUpdateCollection } from "./hooks/createOrUpdateCollection";
 import { deleteCollection } from "./hooks/deleteCollection";
+import NavLink from "./components/NavLink";
+import ManageMeilisearch from "./components/ManageMeilisearch";
 
 const payloadMeilisearch =
   (incomingConfig: MeilisearchConfig) =>
   (config: PayloadcConfig): PayloadcConfig => {
-    const { collections } = config;
+    const { collections, admin } = config;
 
     const pluginConfig: SanitizedMeilisearchConfig = {
       ...incomingConfig,
@@ -19,6 +21,21 @@ const payloadMeilisearch =
 
     const processedConfig: PayloadcConfig = {
       ...config,
+      admin: {
+        ...admin,
+        components: {
+          ...admin?.components,
+          afterNavLinks: [...(admin?.components?.afterNavLinks ?? []), NavLink],
+          routes: [
+            ...(admin?.components?.routes ?? []),
+            {
+              Component: ManageMeilisearch,
+              path: "/meilisearch",
+              exact: true,
+            },
+          ],
+        },
+      },
       collections: collections.map((collection) => {
         const sync = pluginConfig.sync?.find(
           (sync) => sync.collection === collection.slug
