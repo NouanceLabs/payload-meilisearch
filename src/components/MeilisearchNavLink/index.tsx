@@ -3,7 +3,7 @@ import { Button } from "payload/components/elements";
 import { useConfig } from "payload/components/utilities";
 import "./index.scss";
 
-const NavLink: React.FC = () => {
+const MeilisearchNavLink: React.FC = () => {
   const {
     routes: { admin: adminRoute },
   } = useConfig();
@@ -20,4 +20,4 @@ const NavLink: React.FC = () => {
   );
 };
 
-export default NavLink;
+export default MeilisearchNavLink;

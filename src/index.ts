@@ -4,8 +4,9 @@ import { SanitizedMeilisearchConfig } from "./types";
 import { MeilisearchConfig } from "./types";
 import { createOrUpdateCollection } from "./hooks/createOrUpdateCollection";
 import { deleteCollection } from "./hooks/deleteCollection";
-import NavLink from "./components/NavLink";
+import MeilisearchNavLink from "./components/MeilisearchNavLink";
 import ManageMeilisearch from "./components/ManageMeilisearch";
+import { extendWebpackConfig } from "./extendWebpackConfig";
 
 const payloadMeilisearch =
   (incomingConfig: MeilisearchConfig) =>
@@ -23,9 +24,13 @@ const payloadMeilisearch =
       ...config,
       admin: {
         ...admin,
+        webpack: extendWebpackConfig(config),
         components: {
           ...admin?.components,
-          afterNavLinks: [...(admin?.components?.afterNavLinks ?? []), NavLink],
+          afterNavLinks: [
+            ...(admin?.components?.afterNavLinks ?? []),
+            MeilisearchNavLink,
+          ],
           routes: [
             ...(admin?.components?.routes ?? []),
             {
