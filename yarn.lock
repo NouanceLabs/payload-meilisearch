@@ -2519,9 +2519,9 @@ i18next-browser-languagedetector@^6.1.8:
     "@babel/runtime" "^7.19.0"
 
 i18next-http-middleware@^3.2.2:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/i18next-http-middleware/-/i18next-http-middleware-3.2.2.tgz#7bc6e5d65397ededb30737b6ff4fe47ce81607fa"
-  integrity sha512-OW2sWnbns+PuLi77T+/ni4Mi+TNJ6Q6XNGdZicMv9FD+QfZrFrynBVqryHB/bfflszx2Zswg/kxtCildVLdhSA==
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/i18next-http-middleware/-/i18next-http-middleware-3.3.0.tgz#f4e504eea68adc5b8e881d9d6eb78f93f7a34dc0"
+  integrity sha512-WX6uqxNwXccdNm/md5VJ+Q47DF2gjqLvygvgNzb2tCJWPM86FCi2LIvKco70EttlpV9IkfkCVNVF07/56EsSEw==
 
 i18next@^22.4.9:
   version "22.4.10"
@@ -3669,7 +3669,7 @@ pause@0.0.1:
   resolved "https://registry.yarnpkg.com/pause/-/pause-0.0.1.tgz#1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d"
   integrity sha512-KG8UEiEVkR3wGEb4m5yZkVCzigAD+cVEJck2CzYZO37ZGJfctvVptVO192MwrtPhzONn6go8ylnOdMhKqi4nfg==
 
-payload@^1.1.8:
+payload@^1.6.16:
   version "1.6.16"
   resolved "https://registry.yarnpkg.com/payload/-/payload-1.6.16.tgz#d72fa3001df6e4136a0bb2b24d3752615611dab9"
   integrity sha512-qKD9NiL4YVwcMxqvw2R8cZ2bREd8cDRHYUQurmdXjVnfxrv9cgZGMXXCN1boEgrrVzhMQkkbg4cdxPUrLwEWDw==
