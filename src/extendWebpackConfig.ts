@@ -25,10 +25,6 @@ export const extendWebpackConfig =
           [path.resolve(__dirname, "./hooks/deleteCollection")]: mockModulePath,
           [path.resolve(__dirname, "./hooks/createOrUpdateCollection")]:
             mockModulePath,
-          [path.resolve(__dirname, "./components/NavLink/index")]:
-            mockModulePath,
-          [path.resolve(__dirname, "./components/ManageMeilisearch/index")]:
-            mockModulePath,
         },
       },
     };
