@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "payload": "^1.1.8",
-    "typescript": "^4.5.5"
+    "typescript": "^5.0.4"
   },
   "files": [
     "dist",
